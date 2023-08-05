@@ -17,9 +17,9 @@ ul {
   list-style-type: none;
 }
 .container {
-  width: 1158px;
+  width: 1128px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -39,7 +39,7 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0;
   height: 72px;
 }
 
@@ -200,6 +200,7 @@ h2 {
   padding-bottom: 120px;
   margin: auto;
 }
+
 .doing-header {
   margin: 0 auto;
   padding-top: 0;
@@ -207,8 +208,9 @@ h2 {
 }
 .doing-section {
   display: flex;
-  justify-content: center;
   gap: 24px;
+  padding-left: 0;
+  margin: 0 auto;
 }
 /* studio - sekcja Our Team */
 .team {
@@ -311,25 +313,27 @@ p {
 /* portfolio - sekcja projekt*/
 
 .project {
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
   padding-bottom: 120px;
-  padding-top: 0;
-  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  padding-left: 0;
+}
+.project li {
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
 }
 .project-name {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.project-item li {
-  border: 1px solid var(--cornflower, #e7e9fc);
-  background: var(--white, #fff);
-}
+
 .project-box {
   padding-bottom: 48px;
   display: flex;
   gap: 24px;
+  padding-left: 0;
+}
+.project-box li {
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
 }
