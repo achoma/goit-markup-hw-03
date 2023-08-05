@@ -242,6 +242,7 @@ h2 {
   padding-top: 32px;
   padding-bottom: 32px;
   text-align: center;
+  gap: 8px;
 }
 p {
   color: var(--text, #434455);
@@ -323,8 +324,8 @@ p {
   background: var(--white, #fff);
 }
 .project-name {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  gap: 8px;
+  padding: 32px 16px;
 }
 
 .project-box {
