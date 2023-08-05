@@ -7,16 +7,42 @@
   --pressed-state: #404bbf;
   --white: #ffffff;
 }
-
+html {
+  overflow: auto;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: auto;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: var(--dark, #2e2f42);
   background-color: var(--white, #ffffff);
+  font-size: 16px;
 }
+/* nagłówek */
 header {
+  border-bottom: 1px solid var(--accent, #e7e9fc);
+  background: var(--white, #ffffff);
   color: var(--dark, #2e2f42);
   font-weight: 48;
 }
+.navi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 72px;
+}
+
 .logo-web {
   color: var(--primary-brand, #4d5ae5);
   font-family: Raleway;
@@ -35,7 +61,9 @@ header {
   line-height: 1.16;
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  padding-right: 76px;
 }
+
 .navi-link a {
   text-decoration: none;
   color: var(--dark, #2e2f42);
@@ -49,6 +77,24 @@ header {
   color: var(--pressed-state, #404bbf);
   text-decoration: none;
 }
+.navi-logo {
+  display: inline-flex;
+  height: 24px;
+  align-items: center;
+}
+.navi-left li {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding-right: 40px;
+}
+
+.contacts li {
+  display: inline-flex;
+  margin-left: auto;
+  justify-content: flex-end;
+  padding-left: 40px;
+}
 .contacts-links a {
   text-decoration: none;
   color: var(--text, #434455);
@@ -60,18 +106,35 @@ header {
 .contacts-links a:focus {
   color: var(--pressed-state, #404bbf);
 }
+/* studio - sekcja główna */
 .hero {
   background-color: var(--dark, #2e2f42);
   text-align: center;
+  height: 600px;
+  margin: auto;
+  padding: 0;
 }
+
 .hero-text {
+  width: 496px;
+  padding-top: 188px;
+  margin: auto;
   font-size: 56px;
   color: var(--white, #ffffff);
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 1.12px;
+  padding-bottom: 48px;
 }
 .servis-button {
+  width: 105;
+  height: 24;
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  border: 4px;
   color: var(--white, #ffffff);
   font-size: 16px;
   font-weight: 500;
@@ -87,20 +150,32 @@ header {
 button:hover {
   cursor: pointer;
 }
-.feature-header {
+/* studio - sekcja pierwsza */
+h3 {
   color: var(--dark, #2e2f42);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
+  margin: auto;
 }
-.feature {
-  color: var(--text, #434455);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
+.feature-list ul {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: 0;
+  gap: 24px;
 }
-.section-header {
+.feature-item {
+  display: block;
+  width: 264px;
+  height: 104px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* studio - sekcja What Are We Doing */
+h2 {
   color: var(--dark, #2e2f42);
   text-align: center;
   font-size: 36px;
@@ -109,25 +184,78 @@ button:hover {
   letter-spacing: 0.72px;
   text-transform: capitalize;
 }
+.doing-section li {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: url(<path-to-image>),
+    lightgray -72.845px -19px / 144.444% 112.667% no-repeat;
+}
+.doing {
+  height: 532px;
+  padding-top: 0;
+  padding-bottom: 120px;
+  margin: auto;
+}
+.doing-header {
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 72px;
+}
+.doing-section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+/* studio - sekcja Our Team */
 .team {
   background-color: var(--light, #f4f4fd);
+  height: 732px;
+  margin: auto;
 }
-.photo-name h3 {
-  color: var(--dark, #2e2f42);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.4px;
+.team-header {
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 72px;
 }
-.photo-name-item p {
+.team-item {
+  display: inline-flex;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0 auto;
+  padding-left: 0;
+  gap: 24px;
+}
+.team-item li {
+  background-color: var(--white, #ffffff);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.team-item-name {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+p {
   color: var(--text, #434455);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  margin: auto;
 }
-
-footer {
+/* Stopka */
+.footer-class {
   background-color: var(--dark, #2e2f42);
+  height: 312px;
+}
+.logo-footer {
+  padding-top: 100px;
+  justify-content: left;
 }
 .logo-studio-footer {
   color: var(--light, #f4f4fd);
@@ -143,8 +271,27 @@ footer {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  width: 264px;
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 100px;
+}
+/* portfolio - sekcja nawigacji*/
+.navi-button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: 96px;
+  padding-bottom: 72px;
 }
 .navi-button button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--accent, #e7e9fc);
   color: var(--primary-brand, #4d5ae5);
   line-height: 1.5;
   font-size: 16px;
@@ -154,8 +301,35 @@ footer {
 }
 .navi-button button:hover,
 .navi-button button:focus {
+  align-items: flex-start;
+  border-radius: 4px;
   color: var(--white, #ffffff);
   background: var(--pressed-state, #404bbf);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+/* portfolio - sekcja projekt*/
+
+.project {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding-bottom: 120px;
+  padding-top: 0;
+  margin: 0 auto;
+}
+.project-name {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.project-item li {
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+}
+.project-box {
+  padding-bottom: 48px;
+  display: flex;
+  gap: 24px;
 }
