@@ -279,7 +279,6 @@ p {
 .navi-button button {
   display: flex;
   padding: 12px 24px;
-  justify-content: center;
   align-items: center;
   border-radius: 4px;
   border: 1px solid var(--cornflower, #e7e9fc);
